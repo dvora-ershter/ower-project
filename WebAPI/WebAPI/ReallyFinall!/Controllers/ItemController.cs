@@ -11,7 +11,7 @@ namespace ReallyFinall_.Controllers
     public class ItemController : ApiController
     {
                   
-           [Route("api/Item/GetItemByItemName")]
+           [Route("api/Item/GetItemByItemName/{itemName}")]
         // GET: api/Item
         public IHttpActionResult GetItemByItemName(string itemName)
         {

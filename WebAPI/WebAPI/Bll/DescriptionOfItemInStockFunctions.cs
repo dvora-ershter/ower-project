@@ -31,6 +31,14 @@ namespace Bll
             } 
             return itemInStockNameList;
         }
+
+        public static List<string> getAllDescriptionsOfItemInStockByItemInStockId(int itemInStockId)
+        {
+            List<string> allDescriptionsOfItemInStock = new List<string>();
+            allDescriptionsOfItemInStock = data.DescriptionOfItemInStock.Where(x => x.ItemInStockId == itemInStockId).
+                                                                      Select(x => x.Value).ToList();
+            return allDescriptionsOfItemInStock;
+        }
     }
 }
 

@@ -17,6 +17,11 @@ namespace ReallyFinall_.Controllers
         {
             return Ok(DescriptionOfItemInStockFunctions.getItemInStockNameListByItemId(itemId));
         }
+        [Route("api/DescriptionOfItemInStock/GetAllDescriptionsOfItemInStockByItemInStockId/{itemInStockId}")]
+        public IHttpActionResult GetAllDescriptionsOfItemInStockByItemInStockId(int itemInStockId)
+        {
+            return Ok(DescriptionOfItemInStockFunctions.getAllDescriptionsOfItemInStockByItemInStockId(itemInStockId));
+        }
 
         // GET: api/DescriptionOfItemInStock/5
         public string Get(int id)
