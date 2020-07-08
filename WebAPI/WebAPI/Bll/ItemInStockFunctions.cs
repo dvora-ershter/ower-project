@@ -23,5 +23,13 @@ namespace Bll
             itemInStockIdList=getItemInStockListByItemId(itemId).Select(x => x.ItemInStockId).ToList();
             return itemInStockIdList;
         }
+        public static List<int> getItemInStockBuyingOrSellingIdListByItemId(int itemId,int isBuying)
+        {
+            List<ItemInStockDTO> itemInStockBuyingOrSellingList = new List<ItemInStockDTO>();
+            itemInStockBuyingOrSellingList = ItemInStockDTO.ConvertToListOfDTO(data.ItemInStock.Where(x=>x.ItemId==itemId&&x.Buying==isBuying).ToList());
+            List<int> itemInStockBuyingOrSellingIdList = new List<int>();
+            itemInStockBuyingOrSellingIdList = itemInStockBuyingOrSellingList.Select(x => x.ItemInStockId).ToList();
+            return itemInStockBuyingOrSellingIdList;
+        }
     }
 }

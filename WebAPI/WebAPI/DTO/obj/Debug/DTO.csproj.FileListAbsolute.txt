@@ -70,3 +70,13 @@ C:\Users\רות\Desktop\Projects\github\ower-project\ower-project\WebAPI\WebAPI\
 C:\Users\רות\Desktop\Projects\github\ower-project\ower-project\WebAPI\WebAPI\DTO\obj\Debug\DTO.csproj.CopyComplete
 C:\Users\רות\Desktop\Projects\github\ower-project\ower-project\WebAPI\WebAPI\DTO\obj\Debug\DTO.dll
 C:\Users\רות\Desktop\Projects\github\ower-project\ower-project\WebAPI\WebAPI\DTO\obj\Debug\DTO.pdb
+C:\Users\רות\Desktop\Projects\github\ower-project\WebAPI\WebAPI\DTO\bin\Debug\DTO.dll
+C:\Users\רות\Desktop\Projects\github\ower-project\WebAPI\WebAPI\DTO\bin\Debug\DTO.pdb
+C:\Users\רות\Desktop\Projects\github\ower-project\WebAPI\WebAPI\DTO\bin\Debug\Dal.dll
+C:\Users\רות\Desktop\Projects\github\ower-project\WebAPI\WebAPI\DTO\bin\Debug\Dal.pdb
+C:\Users\רות\Desktop\Projects\github\ower-project\WebAPI\WebAPI\DTO\bin\Debug\Dal.dll.config
+C:\Users\רות\Desktop\Projects\github\ower-project\WebAPI\WebAPI\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+C:\Users\רות\Desktop\Projects\github\ower-project\WebAPI\WebAPI\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\רות\Desktop\Projects\github\ower-project\WebAPI\WebAPI\DTO\obj\Debug\DTO.csproj.CopyComplete
+C:\Users\רות\Desktop\Projects\github\ower-project\WebAPI\WebAPI\DTO\obj\Debug\DTO.dll
+C:\Users\רות\Desktop\Projects\github\ower-project\WebAPI\WebAPI\DTO\obj\Debug\DTO.pdb

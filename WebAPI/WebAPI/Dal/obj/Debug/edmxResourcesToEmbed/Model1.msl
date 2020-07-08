@@ -90,6 +90,7 @@
           <ScalarProperty Name="ItemInStockId" ColumnName="ItemInStockId" />
           <ScalarProperty Name="ItemId" ColumnName="ItemId" />
           <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="Buying" ColumnName="Buying" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

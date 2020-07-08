@@ -87,6 +87,7 @@
           <Property Name="ItemInStockId" Type="int" Nullable="false" />
           <Property Name="ItemId" Type="int" Nullable="false" />
           <Property Name="ClientId" Type="int" Nullable="false" />
+          <Property Name="Buying" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="KindOfField">
           <Key>
@@ -139,18 +140,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Descripti__ItemI__3D5E1FD2">
-          <End Role="ItemInStock" Type="Self.ItemInStock" Multiplicity="1" />
-          <End Role="DescriptionOfItemInStock" Type="Self.DescriptionOfItemInStock" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ItemInStock">
-              <PropertyRef Name="ItemInStockId" />
-            </Principal>
-            <Dependent Role="DescriptionOfItemInStock">
-              <PropertyRef Name="ItemInStockId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK__Descripti__ItemI__5CD6CB2B">
           <End Role="Item" Type="Self.Item" Multiplicity="1" />
           <End Role="DescriptionOfItem" Type="Self.DescriptionOfItem" Multiplicity="*" />
@@ -175,18 +164,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__FieldOfIt__ItemI__4AB81AF0">
-          <End Role="ItemInStock" Type="Self.ItemInStock" Multiplicity="1" />
-          <End Role="FieldOfItemInStock" Type="Self.FieldOfItemInStock" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ItemInStock">
-              <PropertyRef Name="ItemInStockId" />
-            </Principal>
-            <Dependent Role="FieldOfItemInStock">
-              <PropertyRef Name="ItemInStockId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK__Item__CategoryId__36B12243">
           <End Role="Category" Type="Self.Category" Multiplicity="1" />
           <End Role="Item" Type="Self.Item" Multiplicity="*" />
@@ -199,7 +176,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ItemInSto__Clien__34C8D9D1">
+        <Association Name="FK__ItemInSto__Clien__6FE99F9F">
           <End Role="Client" Type="Self.Client" Multiplicity="1" />
           <End Role="ItemInStock" Type="Self.ItemInStock" Multiplicity="*" />
           <ReferentialConstraint>
@@ -211,7 +188,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ItemInSto__ItemI__35BCFE0A">
+        <Association Name="FK__ItemInSto__ItemI__70DDC3D8">
           <End Role="Item" Type="Self.Item" Multiplicity="1" />
           <End Role="ItemInStock" Type="Self.ItemInStock" Multiplicity="*" />
           <ReferentialConstraint>
@@ -259,10 +236,6 @@
             <End Role="DescriptionOfItem" EntitySet="DescriptionOfItem" />
             <End Role="DescriptionOfItemInStock" EntitySet="DescriptionOfItemInStock" />
           </AssociationSet>
-          <AssociationSet Name="FK__Descripti__ItemI__3D5E1FD2" Association="Self.FK__Descripti__ItemI__3D5E1FD2">
-            <End Role="ItemInStock" EntitySet="ItemInStock" />
-            <End Role="DescriptionOfItemInStock" EntitySet="DescriptionOfItemInStock" />
-          </AssociationSet>
           <AssociationSet Name="FK__Descripti__ItemI__5CD6CB2B" Association="Self.FK__Descripti__ItemI__5CD6CB2B">
             <End Role="Item" EntitySet="Item" />
             <End Role="DescriptionOfItem" EntitySet="DescriptionOfItem" />
@@ -271,19 +244,15 @@
             <End Role="KindOfField" EntitySet="KindOfField" />
             <End Role="DescriptionOfItem" EntitySet="DescriptionOfItem" />
           </AssociationSet>
-          <AssociationSet Name="FK__FieldOfIt__ItemI__4AB81AF0" Association="Self.FK__FieldOfIt__ItemI__4AB81AF0">
-            <End Role="ItemInStock" EntitySet="ItemInStock" />
-            <End Role="FieldOfItemInStock" EntitySet="FieldOfItemInStock" />
-          </AssociationSet>
           <AssociationSet Name="FK__Item__CategoryId__36B12243" Association="Self.FK__Item__CategoryId__36B12243">
             <End Role="Category" EntitySet="Category" />
             <End Role="Item" EntitySet="Item" />
           </AssociationSet>
-          <AssociationSet Name="FK__ItemInSto__Clien__34C8D9D1" Association="Self.FK__ItemInSto__Clien__34C8D9D1">
+          <AssociationSet Name="FK__ItemInSto__Clien__6FE99F9F" Association="Self.FK__ItemInSto__Clien__6FE99F9F">
             <End Role="Client" EntitySet="Client" />
             <End Role="ItemInStock" EntitySet="ItemInStock" />
           </AssociationSet>
-          <AssociationSet Name="FK__ItemInSto__ItemI__35BCFE0A" Association="Self.FK__ItemInSto__ItemI__35BCFE0A">
+          <AssociationSet Name="FK__ItemInSto__ItemI__70DDC3D8" Association="Self.FK__ItemInSto__ItemI__70DDC3D8">
             <End Role="Item" EntitySet="Item" />
             <End Role="ItemInStock" EntitySet="ItemInStock" />
           </AssociationSet>
@@ -332,7 +301,7 @@
           <Property Name="PhoneNumber" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="Email" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Address" Relationship="Self.FK__Client__AddressI__37A5467C" FromRole="Client" ToRole="Address" />
-          <NavigationProperty Name="ItemInStock" Relationship="Self.FK__ItemInSto__Clien__34C8D9D1" FromRole="Client" ToRole="ItemInStock" />
+          <NavigationProperty Name="ItemInStock" Relationship="Self.FK__ItemInSto__Clien__6FE99F9F" FromRole="Client" ToRole="ItemInStock" />
         </EntityType>
         <EntityType Name="DescriptionOfItem">
           <Key>
@@ -356,7 +325,6 @@
           <Property Name="ItemInStockId" Type="Int32" Nullable="false" />
           <Property Name="Value" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="DescriptionOfItem" Relationship="Self.FK__Descripti__Descr__5EBF139D" FromRole="DescriptionOfItemInStock" ToRole="DescriptionOfItem" />
-          <NavigationProperty Name="ItemInStock" Relationship="Self.FK__Descripti__ItemI__3D5E1FD2" FromRole="DescriptionOfItemInStock" ToRole="ItemInStock" />
         </EntityType>
         <EntityType Name="DetailingOfValues">
           <Key>
@@ -374,7 +342,6 @@
           <Property Name="FieldOfItemId" Type="Int32" Nullable="false" />
           <Property Name="ItemInStockId" Type="Int32" Nullable="false" />
           <Property Name="Value" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="ItemInStock" Relationship="Self.FK__FieldOfIt__ItemI__4AB81AF0" FromRole="FieldOfItemInStock" ToRole="ItemInStock" />
         </EntityType>
         <EntityType Name="Item">
           <Key>
@@ -385,7 +352,7 @@
           <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Category" Relationship="Self.FK__Item__CategoryId__36B12243" FromRole="Item" ToRole="Category" />
           <NavigationProperty Name="DescriptionOfItem" Relationship="Self.FK__Descripti__ItemI__5CD6CB2B" FromRole="Item" ToRole="DescriptionOfItem" />
-          <NavigationProperty Name="ItemInStock" Relationship="Self.FK__ItemInSto__ItemI__35BCFE0A" FromRole="Item" ToRole="ItemInStock" />
+          <NavigationProperty Name="ItemInStock" Relationship="Self.FK__ItemInSto__ItemI__70DDC3D8" FromRole="Item" ToRole="ItemInStock" />
           <NavigationProperty Name="PartOfItem" Relationship="Self.FK__PartOfIte__ItemI__398D8EEE" FromRole="Item" ToRole="PartOfItem" />
         </EntityType>
         <EntityType Name="ItemInStock">
@@ -395,10 +362,9 @@
           <Property Name="ItemInStockId" Type="Int32" Nullable="false" />
           <Property Name="ItemId" Type="Int32" Nullable="false" />
           <Property Name="ClientId" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Client" Relationship="Self.FK__ItemInSto__Clien__34C8D9D1" FromRole="ItemInStock" ToRole="Client" />
-          <NavigationProperty Name="DescriptionOfItemInStock" Relationship="Self.FK__Descripti__ItemI__3D5E1FD2" FromRole="ItemInStock" ToRole="DescriptionOfItemInStock" />
-          <NavigationProperty Name="FieldOfItemInStock" Relationship="Self.FK__FieldOfIt__ItemI__4AB81AF0" FromRole="ItemInStock" ToRole="FieldOfItemInStock" />
-          <NavigationProperty Name="Item" Relationship="Self.FK__ItemInSto__ItemI__35BCFE0A" FromRole="ItemInStock" ToRole="Item" />
+          <Property Name="Buying" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Client" Relationship="Self.FK__ItemInSto__Clien__6FE99F9F" FromRole="ItemInStock" ToRole="Client" />
+          <NavigationProperty Name="Item" Relationship="Self.FK__ItemInSto__ItemI__70DDC3D8" FromRole="ItemInStock" ToRole="Item" />
         </EntityType>
         <EntityType Name="KindOfField">
           <Key>
@@ -453,7 +419,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ItemInSto__Clien__34C8D9D1">
+        <Association Name="FK__ItemInSto__Clien__6FE99F9F">
           <End Role="Client" Type="Self.Client" Multiplicity="1" />
           <End Role="ItemInStock" Type="Self.ItemInStock" Multiplicity="*" />
           <ReferentialConstraint>
@@ -501,31 +467,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Descripti__ItemI__3D5E1FD2">
-          <End Role="ItemInStock" Type="Self.ItemInStock" Multiplicity="1" />
-          <End Role="DescriptionOfItemInStock" Type="Self.DescriptionOfItemInStock" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ItemInStock">
-              <PropertyRef Name="ItemInStockId" />
-            </Principal>
-            <Dependent Role="DescriptionOfItemInStock">
-              <PropertyRef Name="ItemInStockId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__FieldOfIt__ItemI__4AB81AF0">
-          <End Role="ItemInStock" Type="Self.ItemInStock" Multiplicity="1" />
-          <End Role="FieldOfItemInStock" Type="Self.FieldOfItemInStock" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ItemInStock">
-              <PropertyRef Name="ItemInStockId" />
-            </Principal>
-            <Dependent Role="FieldOfItemInStock">
-              <PropertyRef Name="ItemInStockId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__ItemInSto__ItemI__35BCFE0A">
+        <Association Name="FK__ItemInSto__ItemI__70DDC3D8">
           <End Role="Item" Type="Self.Item" Multiplicity="1" />
           <End Role="ItemInStock" Type="Self.ItemInStock" Multiplicity="*" />
           <ReferentialConstraint>
@@ -573,7 +515,7 @@
             <End Role="Category" EntitySet="Category" />
             <End Role="Item" EntitySet="Item" />
           </AssociationSet>
-          <AssociationSet Name="FK__ItemInSto__Clien__34C8D9D1" Association="Self.FK__ItemInSto__Clien__34C8D9D1">
+          <AssociationSet Name="FK__ItemInSto__Clien__6FE99F9F" Association="Self.FK__ItemInSto__Clien__6FE99F9F">
             <End Role="Client" EntitySet="Client" />
             <End Role="ItemInStock" EntitySet="ItemInStock" />
           </AssociationSet>
@@ -589,15 +531,7 @@
             <End Role="KindOfField" EntitySet="KindOfField" />
             <End Role="DescriptionOfItem" EntitySet="DescriptionOfItem" />
           </AssociationSet>
-          <AssociationSet Name="FK__Descripti__ItemI__3D5E1FD2" Association="Self.FK__Descripti__ItemI__3D5E1FD2">
-            <End Role="ItemInStock" EntitySet="ItemInStock" />
-            <End Role="DescriptionOfItemInStock" EntitySet="DescriptionOfItemInStock" />
-          </AssociationSet>
-          <AssociationSet Name="FK__FieldOfIt__ItemI__4AB81AF0" Association="Self.FK__FieldOfIt__ItemI__4AB81AF0">
-            <End Role="ItemInStock" EntitySet="ItemInStock" />
-            <End Role="FieldOfItemInStock" EntitySet="FieldOfItemInStock" />
-          </AssociationSet>
-          <AssociationSet Name="FK__ItemInSto__ItemI__35BCFE0A" Association="Self.FK__ItemInSto__ItemI__35BCFE0A">
+          <AssociationSet Name="FK__ItemInSto__ItemI__70DDC3D8" Association="Self.FK__ItemInSto__ItemI__70DDC3D8">
             <End Role="Item" EntitySet="Item" />
             <End Role="ItemInStock" EntitySet="ItemInStock" />
           </AssociationSet>
@@ -701,6 +635,7 @@
                 <ScalarProperty Name="ItemInStockId" ColumnName="ItemInStockId" />
                 <ScalarProperty Name="ItemId" ColumnName="ItemId" />
                 <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+                <ScalarProperty Name="Buying" ColumnName="Buying" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

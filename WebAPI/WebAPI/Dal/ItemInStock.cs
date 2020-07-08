@@ -14,22 +14,12 @@ namespace Dal
     
     public partial class ItemInStock
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public ItemInStock()
-        {
-            this.DescriptionOfItemInStock = new HashSet<DescriptionOfItemInStock>();
-            this.FieldOfItemInStock = new HashSet<FieldOfItemInStock>();
-        }
-    
         public int ItemInStockId { get; set; }
         public int ItemId { get; set; }
         public int ClientId { get; set; }
+        public int Buying { get; set; }
     
         public virtual Client Client { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DescriptionOfItemInStock> DescriptionOfItemInStock { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FieldOfItemInStock> FieldOfItemInStock { get; set; }
         public virtual Item Item { get; set; }
     }
 }

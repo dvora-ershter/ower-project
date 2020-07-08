@@ -86,3 +86,15 @@ C:\Users\רות\Desktop\Projects\github\ower-project\ower-project\WebAPI\WebAPI\
 C:\Users\רות\Desktop\Projects\github\ower-project\ower-project\WebAPI\WebAPI\Bll\obj\Debug\Bll.csproj.CopyComplete
 C:\Users\רות\Desktop\Projects\github\ower-project\ower-project\WebAPI\WebAPI\Bll\obj\Debug\Bll.dll
 C:\Users\רות\Desktop\Projects\github\ower-project\ower-project\WebAPI\WebAPI\Bll\obj\Debug\Bll.pdb
+C:\Users\רות\Desktop\Projects\github\ower-project\WebAPI\WebAPI\Bll\bin\Debug\Bll.dll
+C:\Users\רות\Desktop\Projects\github\ower-project\WebAPI\WebAPI\Bll\bin\Debug\Bll.pdb
+C:\Users\רות\Desktop\Projects\github\ower-project\WebAPI\WebAPI\Bll\bin\Debug\Dal.dll
+C:\Users\רות\Desktop\Projects\github\ower-project\WebAPI\WebAPI\Bll\bin\Debug\DTO.dll
+C:\Users\רות\Desktop\Projects\github\ower-project\WebAPI\WebAPI\Bll\bin\Debug\Dal.pdb
+C:\Users\רות\Desktop\Projects\github\ower-project\WebAPI\WebAPI\Bll\bin\Debug\Dal.dll.config
+C:\Users\רות\Desktop\Projects\github\ower-project\WebAPI\WebAPI\Bll\bin\Debug\DTO.pdb
+C:\Users\רות\Desktop\Projects\github\ower-project\WebAPI\WebAPI\Bll\obj\Debug\Bll.csprojAssemblyReference.cache
+C:\Users\רות\Desktop\Projects\github\ower-project\WebAPI\WebAPI\Bll\obj\Debug\Bll.csproj.CoreCompileInputs.cache
+C:\Users\רות\Desktop\Projects\github\ower-project\WebAPI\WebAPI\Bll\obj\Debug\Bll.csproj.CopyComplete
+C:\Users\רות\Desktop\Projects\github\ower-project\WebAPI\WebAPI\Bll\obj\Debug\Bll.dll
+C:\Users\רות\Desktop\Projects\github\ower-project\WebAPI\WebAPI\Bll\obj\Debug\Bll.pdb

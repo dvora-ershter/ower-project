@@ -15,15 +15,15 @@ namespace Bll
         {
             data.DescriptionOfItemInStock.Add(DescriptionOfItemInStockDTO.ConvertFromDTO(descriptionOfItemInStockDTO));
         }
-        public static List<ItemInStockNameDTO> getItemInStockNameListByItemId(int itemId)
+        public static List<ItemInStockDetailsDTO> getItemInStockBuyingOrSellingNameListByItemId(int itemId,int isBuying)
         {
             int descriptionOfItemId = DescriptionOfItemFunctions.getMainDescriptionOfItemIdByItemId(itemId);
             List<int> itemInStockIdList = new List<int>();
-            itemInStockIdList = ItemInStockFunctions.getItemInStockIdListByItemId(itemId);
-            List<ItemInStockNameDTO> itemInStockNameList = new List<ItemInStockNameDTO>();
+            itemInStockIdList = ItemInStockFunctions.getItemInStockBuyingOrSellingIdListByItemId(itemId, isBuying);
+            List<ItemInStockDetailsDTO> itemInStockNameList = new List<ItemInStockDetailsDTO>();
             foreach (int itemInStockId in itemInStockIdList)
             {
-                ItemInStockNameDTO itemInStockName=new ItemInStockNameDTO();
+                ItemInStockDetailsDTO itemInStockName=new ItemInStockDetailsDTO();
                 itemInStockName.MainDescriptionofItemValue = data.DescriptionOfItemInStock.
                 FirstOrDefault(x => x.DescriptionOfItemId == descriptionOfItemId && x.ItemInStockId == itemInStockId).Value;
                 itemInStockName.ItemInstockId = itemInStockId;
@@ -31,6 +31,7 @@ namespace Bll
             } 
             return itemInStockNameList;
         }
+
 
         public static List<string> getAllDescriptionsOfItemInStockByItemInStockId(int itemInStockId)
         {

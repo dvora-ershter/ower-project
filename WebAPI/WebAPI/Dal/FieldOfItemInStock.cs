@@ -18,7 +18,5 @@ namespace Dal
         public int FieldOfItemId { get; set; }
         public int ItemInStockId { get; set; }
         public string Value { get; set; }
-    
-        public virtual ItemInStock ItemInStock { get; set; }
     }
 }

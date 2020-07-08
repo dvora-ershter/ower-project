@@ -20,6 +20,5 @@ namespace Dal
         public string Value { get; set; }
     
         public virtual DescriptionOfItem DescriptionOfItem { get; set; }
-        public virtual ItemInStock ItemInStock { get; set; }
     }
 }

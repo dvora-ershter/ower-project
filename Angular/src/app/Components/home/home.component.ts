@@ -29,7 +29,8 @@ export class HomeComponent implements OnInit {
   isFaundItem: boolean = false;
   fieldList: string = '';
   soughtItemList: string = '';
-  itemInStockNameList: Array<ItemInStockName>;
+  itemInStockBuyingNameList: Array<ItemInStockName>;
+  itemInStockSellingNameList: Array<ItemInStockName>;
 
 
 
@@ -60,9 +61,9 @@ export class HomeComponent implements OnInit {
   {
     if(this.item!=null)
     {
-    this.itemService.getItemInStockNameListByItemId(this.item.ItemId).subscribe(
+    this.itemService.getItemInStockBuyingNameListByItemId(this.item.ItemId).subscribe(
       data => {
-        this.itemInStockNameList = data;
+        this.itemInStockBuyingNameList = data;
         
       },
       error => {
@@ -70,13 +71,29 @@ export class HomeComponent implements OnInit {
       }
     );
   }
+  this.next2();
   }
 
   
- 
+  next2()
+  {
+    if(this.item!=null)
+    {
+    this.itemService.getItemInStockSellingNameListByItemId(this.item.ItemId).subscribe(
+      data => {
+        this.itemInStockSellingNameList = data;
+        
+      },
+      error => {
+        alert(error.message);
+      }
+    );
+  }
+}
  
 
-  onFormSubmit(form: NgForm) {
+  onFormSubmit(form: NgForm)
+  {
     console.log(form);
   }
 }

@@ -11,12 +11,20 @@ namespace ReallyFinall_.Controllers
 {
     public class DescriptionOfItemInStockController : ApiController
     {
-        [Route("api/DescriptionOfItemInStock/GetItemInStockNameListByItemId")]
+        [Route("api/DescriptionOfItemInStock/GetItemInStockBuyingOrSellingNameListByItemId/{itemId}")]
         // GET: api/DescriptionOfItemInStock
-        public IHttpActionResult GetItemInStockNameListByItemId(int itemId)
+
+        [Route("api/DescriptionOfItemInStock/GetItemInStockBuyingOrSellingNameListByItemId/{itemId}{isBuying}")]
+        public IHttpActionResult GetItemInStockBuyingOrSellingNameListByItemId(int itemId,int isBuying)
         {
-            return Ok(DescriptionOfItemInStockFunctions.getItemInStockNameListByItemId(itemId));
+            return Ok(DescriptionOfItemInStockFunctions.getItemInStockBuyingOrSellingNameListByItemId(itemId,isBuying));
         }
+
+        //public IHttpActionResult GetItemInStockSellingNameListByItemId(int itemId)
+        //{
+        //    return Ok(DescriptionOfItemInStockFunctions.getItemInStockSellingNameListByItemId(itemId));
+        //}
+
         [Route("api/DescriptionOfItemInStock/GetAllDescriptionsOfItemInStockByItemInStockId/{itemInStockId}")]
         public IHttpActionResult GetAllDescriptionsOfItemInStockByItemInStockId(int itemInStockId)
         {

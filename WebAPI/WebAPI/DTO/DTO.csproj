@@ -50,7 +50,7 @@
     <Compile Include="DetailingOfValuesDTO.cs" />
     <Compile Include="ItemDTO.cs" />
     <Compile Include="ItemInStockDTO.cs" />
-    <Compile Include="ItemInStockNameDTO.cs" />
+    <Compile Include="ItemInStockDetailsDTO.cs" />
     <Compile Include="KindOfFieldDTO.cs" />
     <Compile Include="PartOfItemDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
