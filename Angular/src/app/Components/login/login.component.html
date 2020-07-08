@@ -1,0 +1,34 @@
+<mat-toolbar class="accent">
+    <span>WWOOOOWWWWWWW!!!!!!</span>
+    <span class="demo-toolbar"></span>
+</mat-toolbar>
+<mat-card>
+    <mat-card-content>
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <table>
+                <tr>
+                    <mat-form-field class="demo-full-width">
+                        <input  formControlName="Name" matInput placeholder="Name">
+                    </mat-form-field>
+                    <mat-error>
+                        <span *ngIf="!form.get('Name').valid && form.get('Name').touched">Enter name!!!</span>
+                    </mat-error>
+                </tr>
+                <tr>
+                    <mat-form-field class="demo-full-width">
+                        <input type="Password" formControlName="Password" matInput placeholder="Password">
+                    </mat-form-field>
+                    <mat-error>
+                        <span *ngIf="!form.get('Password').valid && form.get('Password').touched">Enter password!!! </span>
+                    </mat-error>
+                </tr>
+                <tr>
+                    <td class="content-center">
+
+                        <button type="button" mat-raised-button color="accent" (click)="onclick()">New user</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,70 @@
+<mat-toolbar classc="title">
+    <span>wwwwooooooowwwwwwwww!!!!!!!</span>
+    <span class="demo-toolbar"></span>
+</mat-toolbar>
+<mat-card-title>
+    <span>new user</span>
+</mat-card-title>
+<mat-card>
+    <mat-card-content>
+        <form [formGroup]="regiForm" (ngSubmit)="onSubmit()">
+            <table>
+                <tr>
+                    <mat-form-field class="demo-full-width">
+                        <input formControlName="LastName" matInput placeholder="Last name">
+                    </mat-form-field>
+                    <mat-error>
+                        <span *ngIf="!regiForm.get('LastName').valid && regiForm.get('LastName').touched">Enter last name!!!</span>
+                    </mat-error>
+                    <td>
+                        <mat-form-field class="demo-full-width">
+                            <input formControlName="FirstName" matInput placeholder="First name">
+                        </mat-form-field>
+                        <mat-error>
+                            <span *ngIf="!regiForm.get('FirstName').valid && regiForm.get('FirstName').touched">Enter first name!!!</span>
+                        </mat-error>
+                    </td>
+
+                </tr>
+                <tr>
+                    <mat-form-field class="demo-full-width">
+                        <input type="password" formControlName="PasswordAuthentication" matInput placeholder="Password authentication">
+                    </mat-form-field>
+                    <mat-error>
+                        <span *ngIf="regiForm.get('PasswordAuthentication').valid != regiForm.get('Password').valid && regiForm.get('PasswordAuthentication').touched">
+                            The password is wrong!</span>
+                    </mat-error>
+                    <td>
+                        <mat-form-field class="demo-full-width">
+                            <input type="Password" formControlName="Password" matInput placeholder="Password">
+                        </mat-form-field>
+                        <mat-error>
+                            <span *ngIf="!regiForm.get('Password').valid">Enter password!!!</span>
+                        </mat-error>
+                    </td>
+                </tr>
+                <tr>
+                    <mat-form-field class="demo-full-width">
+                        <input formControlName="Email" matInput placeholder="E-mail">
+                    </mat-form-field>
+                    <mat-error>
+                        <span *ngIf="!regiForm.get('Email').valid && regiForm.get('Email').touched"> Press E-mail!!!</span>
+                    </mat-error>
+                    <td>
+                        <mat-form-field class="demo-full-width">
+                            <input formControlName="Phone" matInput placeholder="Phone">
+                        </mat-form-field>
+                        <mat-error>
+                            <span *ngIf="!regiForm.get('Phone').valid && regiForm.get('Phone').touched">Enter phone!!!</span>
+                        </mat-error>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="content-center">
+                        <button type="submit" mat-raised-button color="accent" [disabled]="!regiForm.valid">Ok</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </mat-card-content>
+</mat-card>

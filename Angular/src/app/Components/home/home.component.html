@@ -1,0 +1,49 @@
+<mat-toolbar class="toolbar">
+    <span>Second Hand!</span>
+    
+    <!-- <button mat-button href="">Button as Link</button>    -->
+</mat-toolbar>
+<mat-card class="card">
+    <mat-card-content>
+
+        <form [formGroup]="regiForm" (ngSubmit)="onFormSubmit(regiForm.value)">
+
+            <mat-grid-list cols="3" role="4" rowHeight="100px" class="card">
+                <mat-grid-tile [colspan]="2" [rowspan]="1">
+                    <table class="table">
+                        <tr class="table">
+                            <mat-form-field class="itemName">
+                                <input formControlName="itemName" matInput placeholder="Item Name" (KeyUpEnter)="next()">
+                            </mat-form-field>
+                        </tr>
+                        <tr class="table">
+                            <mat-error class="itemNameError">
+                                <span *ngIf="!regiForm.get('itemName').valid && regiForm.get('itemName').touched">Please enter the Item Name !!!</span>
+                            </mat-error>
+                        </tr>                        
+                        <tr class="table">
+                            <button mat-button type="button" class="centerItems" (click)="next()">Search</button>
+                        </tr>
+                    </table>
+                </mat-grid-tile>
+
+                <mat-grid-tile [colspan]="1" [rowspan]="4">
+                    <div *ngIf="isFaundItem" class="Div">
+                        <app-sought-item-list [item]="item" [itemInStockNameList]="itemInStockNameList"></app-sought-item-list>
+                    </div>
+                </mat-grid-tile>
+
+
+                <mat-grid-tile [colspan]="2" [rowspan]="2">
+                    <div *ngIf="isFaundItem" class="fieldsComponentDiv">
+                        <app-fields [item]="item" [itemInStockNameList]="itemInStockNameList"></app-fields>
+                    </div>
+                </mat-grid-tile>
+                <div *ngIf="isFaundItem" class="Div">
+                    <app-sought-item-list [item]="item" [itemInStockNameList]="itemInStockNameList"></app-sought-item-list>
+                </div>
+            </mat-grid-list>
+            <br/>
+        </form>
+    </mat-card-content>
+</mat-card>

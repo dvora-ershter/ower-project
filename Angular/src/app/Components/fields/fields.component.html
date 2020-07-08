@@ -1,0 +1,36 @@
+<mat-card class="matcard">
+    <mat-card-content>
+
+        <form [formGroup]="fieldsForm" (ngSubmit)="ok()">
+            <table class="table">
+                <tr class="table" *ngFor="let field of fields;let i=index">
+                    <td class="table">
+                        <span>{{field.FieldName}}</span>
+                    </td>
+                    <td class="table">
+                        <mat-form-field class="demo-full-width">
+                            <input formControlName="value" matInput [placeholder]="field.FieldName" [(ngModel)]="values[i].FieldOfItemInStockName">
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr class="table" *ngFor="let field of fields;let i=index">
+
+                </tr>
+                <tr class="table" *ngFor="let field of newFields;let i=index">
+                    <mat-form-field class="demo-full-width">
+                        <input formControlName="newField" matInput placeholder="Field" [(ngModel)]="newFields[i].field">
+                    </mat-form-field>
+                    <mat-form-field class="demo-full-width">
+                        <input formControlName="newValue" matInput placeholder=newField[i].field>
+                    </mat-form-field>
+                    <!-- input-שם ngModel=values[i].name ;
+        input-ערך -->
+                </tr>
+                <!--<button type="submit" mat-raised-button  (click)=ok() > ok </button> -->
+            </table>
+            <mat-form-field class="demo-full-width">
+                <button type="budtton" class="fieldsTable" mat-raise-button (click)=add()> Add Field </button>
+            </mat-form-field>
+        </form>
+    </mat-card-content>
+</mat-card>
