@@ -11,10 +11,10 @@ namespace ReallyFinall_.Controllers
 {
     public class DescriptionOfItemInStockController : ApiController
     {
-        [Route("api/DescriptionOfItemInStock/GetItemInStockBuyingOrSellingNameListByItemId/{itemId}")]
+        //[Route("api/DescriptionOfItemInStock/GetItemInStockBuyingOrSellingNameListByItemId/{itemId}")]
         // GET: api/DescriptionOfItemInStock
 
-        [Route("api/DescriptionOfItemInStock/GetItemInStockBuyingOrSellingNameListByItemId/{itemId}{isBuying}")]
+        [Route("api/DescriptionOfItemInStock/GetItemInStockBuyingOrSellingNameListByItemId/{itemId}/{isBuying}")]
         public IHttpActionResult GetItemInStockBuyingOrSellingNameListByItemId(int itemId,int isBuying)
         {
             return Ok(DescriptionOfItemInStockFunctions.getItemInStockBuyingOrSellingNameListByItemId(itemId,isBuying));
@@ -25,10 +25,10 @@ namespace ReallyFinall_.Controllers
         //    return Ok(DescriptionOfItemInStockFunctions.getItemInStockSellingNameListByItemId(itemId));
         //}
 
-        [Route("api/DescriptionOfItemInStock/GetAllDescriptionsOfItemInStockByItemInStockId/{itemInStockId}")]
-        public IHttpActionResult GetAllDescriptionsOfItemInStockByItemInStockId(int itemInStockId)
+        [Route("api/DescriptionOfItemInStock/GetAllDetailsOfItemInStockByItemInStockId/{itemInStockId}")]
+        public IHttpActionResult GetAllDetailsOfItemInStockByItemInStockId(int itemInStockId)
         {
-            return Ok(DescriptionOfItemInStockFunctions.getAllDescriptionsOfItemInStockByItemInStockId(itemInStockId));
+            return Ok(DescriptionOfItemInStockFunctions.getAllDetailsOfItemInStockByItemInStockId(itemInStockId));
         }
 
         // GET: api/DescriptionOfItemInStock/5

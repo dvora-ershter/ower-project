@@ -15,6 +15,7 @@ namespace Bll
         {
             data.DescriptionOfItemInStock.Add(DescriptionOfItemInStockDTO.ConvertFromDTO(descriptionOfItemInStockDTO));
         }
+
         public static List<ItemInStockDetailsDTO> getItemInStockBuyingOrSellingNameListByItemId(int itemId,int isBuying)
         {
             int descriptionOfItemId = DescriptionOfItemFunctions.getMainDescriptionOfItemIdByItemId(itemId);
@@ -33,12 +34,15 @@ namespace Bll
         }
 
 
-        public static List<string> getAllDescriptionsOfItemInStockByItemInStockId(int itemInStockId)
+        public static ItemInStockAllDetails getAllDetailsOfItemInStockByItemInStockId(int itemInStockId)
         {
-            List<string> allDescriptionsOfItemInStock = new List<string>();
-            allDescriptionsOfItemInStock = data.DescriptionOfItemInStock.Where(x => x.ItemInStockId == itemInStockId).
-                                                                      Select(x => x.Value).ToList();
-            return allDescriptionsOfItemInStock;
+            ClientDTO clientDTO = ClientFunctions.getClientByItemInstockId(itemInStockId);
+            ItemInStockAllDetails itemInStockAllDetails = new ItemInStockAllDetails();
+            itemInStockAllDetails.ClientFirstName = clientDTO.FirstName;
+            itemInStockAllDetails.ClientLastName = clientDTO.LastName;
+            itemInStockAllDetails.AllDescriptionsOfItemInStock= data.DescriptionOfItemInStock.Where(x => x.ItemInStockId == itemInStockId).
+                                                                                              Select(x => x.Value).ToList();
+            return itemInStockAllDetails;
         }
     }
 }

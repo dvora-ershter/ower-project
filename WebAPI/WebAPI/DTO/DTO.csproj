@@ -49,6 +49,7 @@
     <Compile Include="DescriptionOfItemDTO.cs" />
     <Compile Include="DetailingOfValuesDTO.cs" />
     <Compile Include="ItemDTO.cs" />
+    <Compile Include="ItemInStockAllDetails.cs" />
     <Compile Include="ItemInStockDTO.cs" />
     <Compile Include="ItemInStockDetailsDTO.cs" />
     <Compile Include="KindOfFieldDTO.cs" />

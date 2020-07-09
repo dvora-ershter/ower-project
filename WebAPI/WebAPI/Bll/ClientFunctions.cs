@@ -40,7 +40,7 @@ namespace Bll
             d.SaveChanges();
         }
         //•	החזרת לקוח מרשימת לקוחות ע"פ קוד חפץ במלאי.
-        public static ClientDTO GetClientByProductInStock(int itemInStockId)
+        public static ClientDTO getClientByItemInstockId(int itemInStockId)
         {
             Client c = new Client();
             c = d.Client.FirstOrDefault(x => (x.ItemInStock.FirstOrDefault(y => y.ItemId == itemInStockId) != null));

@@ -14,7 +14,7 @@ namespace ReallyFinall_.Controllers
         [Route("api/Client/GetClientByProductInStock/{itemInStockId}")]
         public IHttpActionResult Get(int itemInStockId)
         {
-            return Ok(ClientFunctions.GetClientByProductInStock(itemInStockId));
+            return Ok(ClientFunctions.getClientByItemInstockId(itemInStockId));
         }
 
         // POST: api/Client
