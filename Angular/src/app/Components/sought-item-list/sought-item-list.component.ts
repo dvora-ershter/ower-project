@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Item } from '../../Classes/item';
 import { ItemInStockName } from 'src/app/Classes/item-in-stock-name';
 
@@ -9,7 +9,8 @@ import { ItemInStockName } from 'src/app/Classes/item-in-stock-name';
 })
 export class SoughtItemListComponent implements OnInit {
   @Input() item: Item;
-  @Input()itemInStockNameList: Array<ItemInStockName>;
+  @Input() itemInStockNameList: Array<ItemInStockName>;
+
   constructor() { }
 
   ngOnInit() {

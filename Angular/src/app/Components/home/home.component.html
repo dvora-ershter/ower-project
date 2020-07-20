@@ -29,19 +29,19 @@
 
                 <mat-grid-tile [colspan]="1" [rowspan]="4">
                     <div *ngIf="isFaundItem" class="Div">
-                        <app-sought-item-list [item]="item" [itemInStockNameList]="itemInStockNameList"></app-sought-item-list>
+                        <app-sought-item-list [item]="item"></app-sought-item-list>
                     </div>
                 </mat-grid-tile>
 
 
-                <mat-grid-tile [colspan]="2" [rowspan]="2">
+                <!-- <mat-grid-tile [colspan]="2" [rowspan]="2">
                     <div *ngIf="isFaundItem" class="fieldsComponentDiv">
                         <app-fields [item]="item" [itemInStockNameList]="itemInStockNameList"></app-fields>
                     </div>
                 </mat-grid-tile>
                 <div *ngIf="isFaundItem" class="Div">
                     <app-sought-item-list [item]="item" [itemInStockNameList]="itemInStockNameList"></app-sought-item-list>
-                </div>
+                </div> -->
             </mat-grid-list>
             <br/>
         </form>

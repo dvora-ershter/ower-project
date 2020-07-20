@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { ItemService } from 'src/app/Services/item.service';
+import { Item } from 'src/app/Classes/item';
+import { ItemInStockName } from 'src/app/Classes/item-in-stock-name';
 
 @Component({
   selector: 'app-sale',
@@ -7,9 +10,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SaleComponent implements OnInit {
 
-  constructor() { }
+  @Output() chooseItem=new EventEmitter<number>();
+  @Input() item:Item;
+  itemInStockSellingNameList:ItemInStockName[];
 
-  ngOnInit() {
+  constructor(private itemService:ItemService) { }
+  ngOnInit()
+  {
+    this.itemService.getItemInStockSellingNameListByItemId(this.item.ItemId).subscribe(
+            data => {
+              this.itemInStockSellingNameList = data;
+              
+            },
+            error => {
+              alert(error.message);
+            }
+          );
   }
+  onChooseItem(itemId:number)
+  {
+    this.chooseItem.emit(itemId);
+  } 
 
+  // getSellingNameList()
+  //   {
+  //     this.itemService.getItemInStockSellingNameListByItemId(this.item.ItemId).subscribe(
+  //       data => {
+  //         this.itemInStockSellingNameList = data;
+          
+  //       },
+  //       error => {
+  //         alert(error.message);
+  //       }
+  //     );
+  //   }
 }

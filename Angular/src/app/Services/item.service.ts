@@ -42,12 +42,17 @@ getFieldListByItemId(itemId:number):Observable<FieldOfItem[]>
 
   getItemInStockBuyingNameListByItemId(itemId:number):Observable<ItemInStockName[]>
   {
-      return this.http.get<ItemInStockName[]>(this.baseURL + "api/DescriptionOfItemInStock/GetItemInStockBuyingNameListByItemId?itemId="+itemId);
+      return this.http.get<ItemInStockName[]>(this.baseURL + "api/DescriptionOfItemInStock/GetItemInStockBuyingNameListByItemId?itemId="+itemId+"?buying=1");
   }
 
   getItemInStockSellingNameListByItemId(itemId:number):Observable<ItemInStockName[]>
   {
-      return this.http.get<ItemInStockName[]>(this.baseURL + "api/DescriptionOfItemInStock/GetItemInStockSellingNameListByItemId?itemId="+itemId);
+      return this.http.get<ItemInStockName[]>(this.baseURL + "api/DescriptionOfItemInStock/GetItemInStockSellingNameListByItemId?itemId="+itemId+"?buying=0");
+  }
+
+  getItemInStockDetailsByItemInStockId(itemInStockId:number):Observable<ItemInStock>
+  {
+      return this.http.get<ItemInStock>(this.baseURL + "api/DescriptionOfItemInStock/GetAllDetailsOfItemInStockByItemInStockId?ItemInStockId="+itemInStockId);
   }
 
 }

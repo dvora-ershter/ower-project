@@ -1,4 +1,7 @@
-<div *ngFor="let i of itemInStockSellingNameList">
+<a *ngFor="let i of itemInStockSellingNameList" (click)="onChooseItem(i.ItemInstockId)">
     {{i.MainDescriptionofItemValue}}
+</a>
+<!-- <div *ngIf="click" class="Div">
+    <app-item-in-stock [itemInStockId]="i.ItemInstockId"></app-item-in-stock>
 </div>
- 
+  -->

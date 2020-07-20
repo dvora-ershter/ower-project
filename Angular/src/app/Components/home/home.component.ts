@@ -21,7 +21,8 @@ export class HomeComponent implements OnInit {
   title = 'materialApp';
   constructor(private fb: FormBuilder, private itemService: ItemService) { }
 
-  item: Item;
+  // item: Item;
+  item:Item;
   itemName: string = '';
   sendItemName: string;
   regiForm: FormGroup;
@@ -30,7 +31,7 @@ export class HomeComponent implements OnInit {
   fieldList: string = '';
   soughtItemList: string = '';
   itemInStockBuyingNameList: Array<ItemInStockName>;
-  itemInStockSellingNameList: Array<ItemInStockName>;
+  // itemInStockSellingNameList: Array<ItemInStockName>;
 
 
 
@@ -55,41 +56,41 @@ export class HomeComponent implements OnInit {
       alert(error.message);
     }
   );  
-   this.next1();
-  }
-  next1()
-  {
-    if(this.item!=null)
-    {
-    this.itemService.getItemInStockBuyingNameListByItemId(this.item.ItemId).subscribe(
-      data => {
-        this.itemInStockBuyingNameList = data;
+  //  this.next1();
+}
+//   next1()
+//   {
+//     if(this.item!=null)
+//     {
+//     this.itemService.getItemInStockBuyingNameListByItemId(this.item.ItemId).subscribe(
+//       data => {
+//         this.itemInStockBuyingNameList = data;
         
-      },
-      error => {
-        alert(error.message);
-      }
-    );
-  }
-  this.next2();
-  }
+//       },
+//       error => {
+//         alert(error.message);
+//       }
+//     );
+//   }
+//   // this.next2();
+// }
 
   
-  next2()
-  {
-    if(this.item!=null)
-    {
-    this.itemService.getItemInStockSellingNameListByItemId(this.item.ItemId).subscribe(
-      data => {
-        this.itemInStockSellingNameList = data;
+  // next2()
+  // {
+  //   if(this.item!=null)
+  //   {
+  //   this.itemService.getItemInStockSellingNameListByItemId(this.item.ItemId).subscribe(
+  //     data => {
+  //       this.itemInStockSellingNameList = data;
         
-      },
-      error => {
-        alert(error.message);
-      }
-    );
-  }
-}
+  //     },
+  //     error => {
+  //       alert(error.message);
+  //     }
+  //   );
+  // }
+// }
  
 
   onFormSubmit(form: NgForm)

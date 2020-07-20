@@ -13,12 +13,21 @@ export class BuyComponent implements OnInit {
 
   constructor(private fb: FormBuilder, private itemService: ItemService) { }
 
-  @Input()itemInStockNameList: Array<ItemInStockName>;
+  itemInStockBuyingNameList: Array<ItemInStockName>;
   regiForm: FormGroup;
   @Input() item: Item;
-  ngOnInit() {
 
-
+  ngOnInit()
+  {
+    this.itemService.getItemInStockSellingNameListByItemId(this.item.ItemId).subscribe(
+            data => {
+              this.itemInStockBuyingNameList = data;
+              
+            },
+            error => {
+              alert(error.message);
+            }
+          );
   }
 
 }

@@ -56,7 +56,8 @@ import { SoughtItemListComponent } from './Components/sought-item-list/sought-it
 import { UserDetailsComponent } from './Components/user-details/user-details.component';
 import { NotFoundComponent } from './Components/not-found/not-found.component';
 import { NewUserComponent } from './Components/new-user/new-user.component';
-import { LoginComponent } from './Components/login/login.component'
+import { LoginComponent } from './Components/login/login.component';
+import { ItemInStockComponent } from './Components/item-in-stock/item-in-stock.component'
 
 
 @NgModule({
@@ -73,7 +74,8 @@ import { LoginComponent } from './Components/login/login.component'
     UserDetailsComponent,
     NotFoundComponent,
     NewUserComponent,
-    LoginComponent
+    LoginComponent,
+    ItemInStockComponent
 
     
   ],
