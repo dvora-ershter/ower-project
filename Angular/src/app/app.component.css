@@ -1,0 +1,20 @@
+ul{
+    display: flex;
+    background-color: blue;
+    color: white;
+    padding: 1rem 0rem;
+    align-items: center;
+    justify-content: center;
+}
+li{
+    list-style: none;
+}
+a{
+    color: white;
+    text-decoration: unset;
+    font-size: 22px;
+    margin: 0 2rem;
+}
+.aaa{
+    color:white;
+}

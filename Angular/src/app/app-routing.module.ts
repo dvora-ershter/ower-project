@@ -12,21 +12,11 @@ import { LoginComponent } from 'src/app/Components/login/login.component';
 
 const routes: Routes = 
 [
-{path:"",component:HomeComponent,
-children:
-[
-  {path:"sought item list",component:SoughtItemListComponent,
-  children:
-  [
-    {path:"sale",component:SaleComponent},
-    {path:"buy",component:BuyComponent}
-  ]},  
-]},
-{path:"login",component:LoginComponent},
-{path:"new-user",component:NewUserComponent},
-{path:"user-details",component:UserDetailsComponent},
-{path:"not-found", component:NotFoundComponent},
-{path:"**", redirectTo:"/not-found"}
+  {path: '',component:HomeComponent },
+  {path: '',redirectTo: '/home', pathMatch: 'full' },
+  {path:'Buying',component:BuyComponent},
+  {path:'Selling',component:SaleComponent},
+  {path:'login',component:LoginComponent}
 ];
 
 @NgModule({

@@ -80,5 +80,13 @@ C:\Users\רות\Desktop\Projects\github\ower-project\WebAPI\WebAPI\DTO\obj\Debug
 C:\Users\רות\Desktop\Projects\github\ower-project\WebAPI\WebAPI\DTO\obj\Debug\DTO.csproj.CopyComplete
 C:\Users\רות\Desktop\Projects\github\ower-project\WebAPI\WebAPI\DTO\obj\Debug\DTO.dll
 C:\Users\רות\Desktop\Projects\github\ower-project\WebAPI\WebAPI\DTO\obj\Debug\DTO.pdb
-C:\Users\54019\Desktop\github\ower-project\WebAPI\WebAPI\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
-C:\Users\54019\Desktop\github\ower-project\WebAPI\WebAPI\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\54019\Desktop\‏‏תיקיה חדשה\try\WebAPI\WebAPI\DTO\bin\Debug\DTO.dll
+C:\Users\54019\Desktop\‏‏תיקיה חדשה\try\WebAPI\WebAPI\DTO\bin\Debug\DTO.pdb
+C:\Users\54019\Desktop\‏‏תיקיה חדשה\try\WebAPI\WebAPI\DTO\bin\Debug\Dal.dll
+C:\Users\54019\Desktop\‏‏תיקיה חדשה\try\WebAPI\WebAPI\DTO\bin\Debug\Dal.pdb
+C:\Users\54019\Desktop\‏‏תיקיה חדשה\try\WebAPI\WebAPI\DTO\bin\Debug\Dal.dll.config
+C:\Users\54019\Desktop\‏‏תיקיה חדשה\try\WebAPI\WebAPI\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+C:\Users\54019\Desktop\‏‏תיקיה חדשה\try\WebAPI\WebAPI\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\54019\Desktop\‏‏תיקיה חדשה\try\WebAPI\WebAPI\DTO\obj\Debug\DTO.csproj.CopyComplete
+C:\Users\54019\Desktop\‏‏תיקיה חדשה\try\WebAPI\WebAPI\DTO\obj\Debug\DTO.dll
+C:\Users\54019\Desktop\‏‏תיקיה חדשה\try\WebAPI\WebAPI\DTO\obj\Debug\DTO.pdb

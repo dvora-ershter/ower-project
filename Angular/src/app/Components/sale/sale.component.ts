@@ -10,7 +10,7 @@ import { ItemInStockName } from 'src/app/Classes/item-in-stock-name';
 })
 export class SaleComponent implements OnInit {
 
-  @Output() chooseItem=new EventEmitter<number>();
+  @Output() chooseItem:EventEmitter<number>=new EventEmitter<number>();
   @Input() item:Item;
   itemInStockSellingNameList:ItemInStockName[];
 

@@ -37,7 +37,7 @@ getFieldListByItemId(itemId:number):Observable<FieldOfItem[]>
  
   getItemByItemName(itemName:string):Observable<Item>
   {
-      return this.http.get<Item>(this.baseURL + "api/Item/GetItemByItemName?itemName="+itemName);
+      return this.http.get<Item>(this.baseURL + "api/Item/GetItemByItemName/{itemName}?itemName="+itemName);
   }
 
   getItemInStockBuyingNameListByItemId(itemId:number):Observable<ItemInStockName[]>

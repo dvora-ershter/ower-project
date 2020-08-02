@@ -6,4 +6,24 @@
 <!-- <app-sought-item-list></app-sought-item-list> -->
 <!-- <app-new-user></app-new-user> -->
 <!-- <app-login></app-login> -->
-<router-outlet></router-outlet>
+<!-- <nav>
+    <ul>
+      <li><a routerLink="/Buying" routerLinkActive="active">To buy a item</a></li>
+      <li><a routerLink="/Selling" routerLinkActive="active">To sell a item</a></li>
+    </ul>
+  </nav> -->
+
+  <!-- <mat-toolbar color="red">   
+    <button mat-button routerLink="">Home</button>  
+    <button mat-button routerLink="/Buying">To buy a item</button>  
+    <button mat-button routerLink="/Selling">To sell a item</button></mat-toolbar>
+<router-outlet></router-outlet> -->
+<nav>
+  <ul>
+    <li><a routerLink="" class="aaa">Home</a></li>
+    <li><a routerLink="/Selling" class="aaa">To buy a item</a></li>
+    <li><a routerLink="/Buying" class="aaa">To sell a item</a></li>
+    <li><a routerLink="/login" class="aaa">Login</a></li>
+  </ul>
+</nav>
+  <router-outlet #routerOutlet="outlet"></router-outlet>

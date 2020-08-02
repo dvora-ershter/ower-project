@@ -83,15 +83,15 @@ C:\Users\רות\Desktop\Projects\github\ower-project\WebAPI\WebAPI\Dal\obj\Debug
 C:\Users\רות\Desktop\Projects\github\ower-project\WebAPI\WebAPI\Dal\obj\Debug\Dal.csproj.CopyComplete
 C:\Users\רות\Desktop\Projects\github\ower-project\WebAPI\WebAPI\Dal\obj\Debug\Dal.dll
 C:\Users\רות\Desktop\Projects\github\ower-project\WebAPI\WebAPI\Dal\obj\Debug\Dal.pdb
-C:\Users\54019\Desktop\github\ower-project\WebAPI\WebAPI\Dal\bin\Debug\Dal.dll.config
-C:\Users\54019\Desktop\github\ower-project\WebAPI\WebAPI\Dal\bin\Debug\Dal.dll
-C:\Users\54019\Desktop\github\ower-project\WebAPI\WebAPI\Dal\bin\Debug\Dal.pdb
-C:\Users\54019\Desktop\github\ower-project\WebAPI\WebAPI\Dal\bin\Debug\EntityFramework.dll
-C:\Users\54019\Desktop\github\ower-project\WebAPI\WebAPI\Dal\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\54019\Desktop\github\ower-project\WebAPI\WebAPI\Dal\bin\Debug\EntityFramework.xml
-C:\Users\54019\Desktop\github\ower-project\WebAPI\WebAPI\Dal\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\54019\Desktop\github\ower-project\WebAPI\WebAPI\Dal\obj\Debug\Dal.csprojAssemblyReference.cache
-C:\Users\54019\Desktop\github\ower-project\WebAPI\WebAPI\Dal\obj\Debug\Dal.csproj.CoreCompileInputs.cache
-C:\Users\54019\Desktop\github\ower-project\WebAPI\WebAPI\Dal\obj\Debug\Dal.csproj.CopyComplete
-C:\Users\54019\Desktop\github\ower-project\WebAPI\WebAPI\Dal\obj\Debug\Dal.dll
-C:\Users\54019\Desktop\github\ower-project\WebAPI\WebAPI\Dal\obj\Debug\Dal.pdb
+C:\Users\54019\Desktop\‏‏תיקיה חדשה\try\WebAPI\WebAPI\Dal\bin\Debug\Dal.dll.config
+C:\Users\54019\Desktop\‏‏תיקיה חדשה\try\WebAPI\WebAPI\Dal\bin\Debug\Dal.dll
+C:\Users\54019\Desktop\‏‏תיקיה חדשה\try\WebAPI\WebAPI\Dal\bin\Debug\Dal.pdb
+C:\Users\54019\Desktop\‏‏תיקיה חדשה\try\WebAPI\WebAPI\Dal\bin\Debug\EntityFramework.dll
+C:\Users\54019\Desktop\‏‏תיקיה חדשה\try\WebAPI\WebAPI\Dal\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\54019\Desktop\‏‏תיקיה חדשה\try\WebAPI\WebAPI\Dal\bin\Debug\EntityFramework.xml
+C:\Users\54019\Desktop\‏‏תיקיה חדשה\try\WebAPI\WebAPI\Dal\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\54019\Desktop\‏‏תיקיה חדשה\try\WebAPI\WebAPI\Dal\obj\Debug\Dal.csprojAssemblyReference.cache
+C:\Users\54019\Desktop\‏‏תיקיה חדשה\try\WebAPI\WebAPI\Dal\obj\Debug\Dal.csproj.CoreCompileInputs.cache
+C:\Users\54019\Desktop\‏‏תיקיה חדשה\try\WebAPI\WebAPI\Dal\obj\Debug\Dal.csproj.CopyComplete
+C:\Users\54019\Desktop\‏‏תיקיה חדשה\try\WebAPI\WebAPI\Dal\obj\Debug\Dal.dll
+C:\Users\54019\Desktop\‏‏תיקיה חדשה\try\WebAPI\WebAPI\Dal\obj\Debug\Dal.pdb

@@ -3,7 +3,7 @@
     
     <!-- <button mat-button href="">Button as Link</button>    -->
 </mat-toolbar>
-<mat-card class="card">
+<!-- <mat-card class="card">
     <mat-card-content>
 
         <form [formGroup]="regiForm" (ngSubmit)="onFormSubmit(regiForm.value)">
@@ -29,9 +29,9 @@
 
                 <mat-grid-tile [colspan]="1" [rowspan]="4">
                     <div *ngIf="isFaundItem" class="Div">
-                        <app-sought-item-list [item]="item"></app-sought-item-list>
+                        <app-sought-item-list [item]="item" (chooseItem)="onChooseItem($event)"></app-sought-item-list>
                     </div>
-                </mat-grid-tile>
+                </mat-grid-tile> -->
 
 
                 <!-- <mat-grid-tile [colspan]="2" [rowspan]="2">
@@ -42,8 +42,8 @@
                 <div *ngIf="isFaundItem" class="Div">
                     <app-sought-item-list [item]="item" [itemInStockNameList]="itemInStockNameList"></app-sought-item-list>
                 </div> -->
-            </mat-grid-list>
+            <!-- </mat-grid-list>
             <br/>
         </form>
     </mat-card-content>
-</mat-card>
+</mat-card> -->

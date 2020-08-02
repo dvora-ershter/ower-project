@@ -10,7 +10,7 @@ import { ItemInStockName } from 'src/app/Classes/item-in-stock-name';
 export class SoughtItemListComponent implements OnInit {
   @Input() item: Item;
   @Input() itemInStockNameList: Array<ItemInStockName>;
-
+  @Output() chooseItem:EventEmitter<number>=new EventEmitter<number>();
   constructor() { }
 
   ngOnInit() {

@@ -8,7 +8,7 @@
         <!-- </mat-grid-tile> -->[itemInStockNameList]="itemInStockNameList">
 
         <!-- <mat-grid-tile [colspan] = "1" [rowspan] = "4"> -->
-        <app-sale [item]="item" ></app-sale>
+        <app-sale [item]="item" (chooseItem)="chooseItem.emit($event)"></app-sale>
         <!-- </mat-grid-tile>
 </mat-grid-list> -->
     </mat-card-content>

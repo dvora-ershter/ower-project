@@ -20,6 +20,7 @@ import {ErrorStateMatcher} from '@angular/material/core';
 import  {ShowOnDirtyErrorStateMatcher } from  '@angular/material/core';
 import  {MatTableModule } from '@angular/material/table';
 
+
 //  import {MatOptionModule} from '@angular/material/select';
 // import {      
   // MatButtonModule,      
@@ -57,7 +58,8 @@ import { UserDetailsComponent } from './Components/user-details/user-details.com
 import { NotFoundComponent } from './Components/not-found/not-found.component';
 import { NewUserComponent } from './Components/new-user/new-user.component';
 import { LoginComponent } from './Components/login/login.component';
-import { ItemInStockComponent } from './Components/item-in-stock/item-in-stock.component'
+import { ItemInStockComponent } from './Components/item-in-stock/item-in-stock.component';
+import { SearchComponent } from './Components/search/search.component'
 
 
 @NgModule({
@@ -75,7 +77,8 @@ import { ItemInStockComponent } from './Components/item-in-stock/item-in-stock.c
     NotFoundComponent,
     NewUserComponent,
     LoginComponent,
-    ItemInStockComponent
+    ItemInStockComponent,
+    SearchComponent
 
     
   ],
@@ -91,7 +94,6 @@ import { ItemInStockComponent } from './Components/item-in-stock/item-in-stock.c
     MatToolbarModule,      
     MatIconModule,      
     MatCardModule,      
-    BrowserAnimationsModule,      
     MatFormFieldModule,      
     MatInputModule,      
     MatDatepickerModule,      
